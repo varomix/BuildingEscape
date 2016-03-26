@@ -21,6 +21,7 @@ public:
 	void OpenDoor();
 	void CloseDoor();
 
+
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
@@ -37,6 +38,7 @@ private:
 
 	float LastDoorOpenTime;
 
-	AActor* ActorThatOpens; // Remember pawn inherits from actor
 	AActor* Owner; // The owning door
+
+	float GetTotalMassOfActorsOnPlate();
 };
